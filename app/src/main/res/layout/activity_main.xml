@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".MainActivity">
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/frame_layout_height_margin"
+        app:layout_constraintBottom_toTopOf="@+id/container"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        tools:layout_editor_absoluteX="-25dp">
+
+        <TextView
+            android:id="@+id/result"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|bottom"
+            android:layout_marginHorizontal="@dimen/text_margin_horizontal"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="0"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_margin" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/container"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:paddingVertical="@dimen/padding_vertical_margin"
+            android:layout_marginHorizontal="@dimen/layout_margin_horizontal"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.button.MaterialButton
+                style="@style/Gray.Button"
+                android:id="@+id/btn_cleaner"
+                android:onClick="onNumberClick"
+                android:text="@string/cleaner"/>
+
+            <com.google.android.material.button.MaterialButton
+                style="@style/Gray.Button"
+                android:text="@string/negative"
+                android:id="@+id/btn_negative"
+                android:onClick="onOperationClick"
+                android:layout_marginHorizontal="@dimen/layout_margin_horizontal"/>
+
+            <com.google.android.material.button.MaterialButton
+                style="@style/Gray.Button"
+                android:text="@string/percent"
+                android:id="@+id/btn_percent"
+                android:onClick="onOperationClick"
+                android:layout_marginEnd="@dimen/layout_margin_end"/>
+
+            <com.google.android.material.button.MaterialButton
+                style="@style/Orange.Button"
+                android:text="@string/divide"
+                android:id="@+id/btn_divide"
+                android:onClick="onOperationClick"
+                android:layout_height="@dimen/layout_height_margin"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:paddingVertical="@dimen/padding_vertical_margin"
+            android:layout_marginHorizontal="@dimen/layout_margin_horizontal"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.button.MaterialButton
+                style="@style/Gray.Dark.Button"
+                android:text="@string/seven"
+                android:id="@+id/btn_seven"
+                android:onClick="onNumberClick"/>
+
+            <com.google.android.material.button.MaterialButton
+                style="@style/Gray.Dark.Button"
+                android:text="@string/eight"
+                android:id="@+id/btn_eight"
+                android:onClick="onNumberClick"
+                android:layout_marginHorizontal="@dimen/layout_margin_horizontal"/>
+
+            <com.google.android.material.button.MaterialButton
+                style="@style/Gray.Dark.Button"
+                android:text="@string/nine"
+                android:id="@+id/btn_nine"
+                android:onClick="onNumberClick"
+                android:layout_marginEnd="@dimen/layout_margin_end"/>
+
+            <com.google.android.material.button.MaterialButton
+                style="@style/Orange.Button"
+                android:text="@string/multiply"
+                android:id="@+id/btn_multiply"
+                android:onClick="onOperationClick"
+                android:layout_height="@dimen/layout_height_margin"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:paddingVertical="@dimen/padding_vertical_margin"
+            android:layout_marginHorizontal="@dimen/layout_margin_horizontal"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.button.MaterialButton
+                style="@style/Gray.Dark.Button"
+                android:text="@string/four"
+                android:id="@+id/btn_four"
+                android:onClick="onNumberClick"/>
+
+            <com.google.android.material.button.MaterialButton
+                style="@style/Gray.Dark.Button"
+                android:text="@string/five"
+                android:id="@+id/btn_five"
+                android:onClick="onNumberClick"
+                android:layout_marginHorizontal="@dimen/layout_margin_horizontal"/>
+
+            <com.google.android.material.button.MaterialButton
+                style="@style/Gray.Dark.Button"
+                android:text="@string/six"
+                android:id="@+id/btn_six"
+                android:onClick="onNumberClick"
+                android:layout_marginEnd="@dimen/layout_margin_end"/>
+
+            <com.google.android.material.button.MaterialButton
+                style="@style/Orange.Button"
+                android:text="@string/minus"
+                android:id="@+id/btn_minus"
+                android:onClick="onOperationClick"
+                android:layout_height="@dimen/layout_height_margin"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:paddingVertical="@dimen/padding_vertical_margin"
+            android:layout_marginHorizontal="@dimen/layout_margin_horizontal"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.button.MaterialButton
+                style="@style/Gray.Dark.Button"
+                android:id="@+id/btn_one"
+                android:onClick="onNumberClick"
+                android:text="@string/one"/>
+
+            <com.google.android.material.button.MaterialButton
+                style="@style/Gray.Dark.Button"
+                android:text="@string/two"
+                android:id="@+id/btn_two"
+                android:onClick="onNumberClick"
+                android:layout_marginHorizontal="@dimen/layout_margin_horizontal"/>
+
+            <com.google.android.material.button.MaterialButton
+                style="@style/Gray.Dark.Button"
+                android:text="@string/three"
+                android:id="@+id/btn_three"
+                android:onClick="onNumberClick"
+                android:layout_marginEnd="@dimen/layout_margin_end"/>
+
+            <com.google.android.material.button.MaterialButton
+                style="@style/Orange.Button"
+                android:text="@string/plus"
+                android:id="@+id/btn_plus"
+                android:onClick="onOperationClick"
+                android:layout_height="@dimen/layout_height_margin"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:paddingVertical="@dimen/padding_vertical_margin"
+            android:layout_marginHorizontal="@dimen/layout_margin_horizontal"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.button.MaterialButton
+                style="@style/Gray.Dark.Button"
+                android:layout_width="@dimen/zero_btn_margin"
+                android:text="@string/zero"
+                android:id="@+id/btn_zero"
+                android:onClick="onNumberClick"
+                android:textAlignment="textStart"
+                android:paddingStart="@dimen/padding_margin_start"
+                android:paddingEnd="@dimen/padding_margin_end"/>
+
+
+            <com.google.android.material.button.MaterialButton
+                style="@style/Gray.Dark.Button"
+                android:text="@string/dot"
+                android:id="@+id/btn_dot"
+                android:onClick="onOperationClick"
+                android:layout_marginHorizontal="@dimen/layout_margin_horizontal"/>
+
+            <com.google.android.material.button.MaterialButton
+                style="@style/Orange.Button"
+                android:text="@string/equal"
+                android:id="@+id/btn_equal"
+                android:onClick="onOperationClick"
+                android:layout_height="@dimen/layout_height_margin"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="frame_layout_height_margin">0dp</dimen>
+    <dimen name="text_size_margin">80sp</dimen>
+    <dimen name="padding_vertical_margin">6dp</dimen>
+    <dimen name="layout_margin_horizontal">7dp</dimen>
+    <dimen name="text_margin_horizontal">53dp</dimen>
+    <dimen name="layout_height_margin">80dp</dimen>
+    <dimen name="zero_btn_margin">168dp</dimen>
+    <dimen name="padding_margin_end">0dp</dimen>
+    <dimen name="padding_margin_start">32dp</dimen>
+    <dimen name="layout_margin_end">7dp</dimen>
+</resources>
